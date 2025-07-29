@@ -1,0 +1,27 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Node modules
+node_modules/
+
+# Composer vendor
+/vendor/
+
+# Environment files
+.env
+.env.local
+
+# WordPress core (optional)
+wp-admin/
+wp-includes/
+wp-config.php
+readme.html
+license.txt
+
+# Log files
+*.log

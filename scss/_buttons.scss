@@ -1,0 +1,30 @@
+@use 'variables';
+
+@mixin button($bg-color: variables.$secondary, $text-color: #fff, $padding: 0.75rem 1.5rem) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: $padding;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+
+  &:hover{
+    background-color: variables.$accent;
+  }
+}
+
+.primary-btn{
+  @include button();
+  // min-width: 200px;
+  // display: inline-block;
+  // text-align: center;
+}
+
+.mobile-btn-primary{
+   @include button();
+  min-width: 200px;
+  display: inline-block;
+  text-align: center;
+}

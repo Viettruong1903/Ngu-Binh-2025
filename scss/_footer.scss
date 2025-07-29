@@ -1,0 +1,73 @@
+@use 'queries';
+@use 'variables';
+@use 'reUseBlock';
+.footer-section{
+
+  background-color: #9c7654;
+  color: #f0e9da;
+
+  .footer-columns{
+  @include reUseBlock.twoBoxFlex(column, space-between, flex-start);
+  gap: 1rem;
+  padding: 1rem 1rem 0 1rem;
+
+  @include queries.respond-to('desktop'){
+    @include reUseBlock.twoBoxFlex(row, space-between, flex-start);
+  }
+  
+
+  .business-profile{
+    // background-color: lightblue;
+    width: 300px;
+  }
+
+  .footer-menus{
+    // background-color: lightcoral;
+    width: 100%;
+    gap: 1rem;
+    @include reUseBlock.twoBoxFlex(column, space-between, flex-start);
+    .our-menu,
+    .useful-links
+    {
+      ul{
+        li{
+          margin-bottom: 0.5rem;
+          a{
+            color: variables.$primary;
+          }
+        }
+      }
+    }
+
+    .contact-us{
+      address{
+        p{
+          a{
+            color: variables.$primary;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    @include queries.respond-to('tablet'){
+      @include reUseBlock.twoBoxFlex(row, space-between, flex-start);
+    }
+    @include queries.respond-to('desktop'){
+      width: 650px;
+    }
+  }
+
+}
+}
+
+.footer-copyright{
+  padding: 0.5rem;
+  background-color: variables.$bonuscolor;
+  div{
+    p{
+      color: variables.$primary;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,179 @@
+@use 'variables';
+@use 'queries';
+@use 'reUseBlock';
+
+header{
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: variables.$primary;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+
+  .header-container{
+    @include reUseBlock.twoBoxFlex(row, space-between, center);
+    padding: 1rem;
+    
+    @include queries.respond-to('desktop'){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem;
+      // max-width: 1140px;
+      // margin: 0 auto;
+    }
+
+
+    .logo{
+      font-size: 2rem;
+    }
+
+    .nav-menu{
+      display: none;
+
+      @include queries.respond-to('tablet') {
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        display: inline-flex;
+
+        
+        a{
+          text-decoration: none;
+          text-transform: capitalize;
+          color: variables.$accent;
+          font-weight: bold;
+
+          &:hover{
+            text-decoration: underline;
+            color: variables.$secondary;
+            // transition: ; try to make slower
+          }
+        }
+      }
+
+    }
+
+    .hamburger-button{
+      width: 30px;
+      height: 30px;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2px;
+      border-radius: 2px;
+      background-color: variables.$accent;
+      cursor: pointer;
+
+      .slice{
+        max-width: 100%;
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: black;
+      }
+
+      @include queries.respond-to('tablet') {
+        display: none;
+      }
+    }
+
+    }
+
+}
+
+.mobile-nav-menu {
+  padding-top: 90px;
+  position: fixed;
+  left: -300px;
+  top: 0;
+  height: 100vh;
+  width: 300px;
+  transition: left 0.3s ease;
+  background-color: variables.$primary;
+  z-index: 4;
+
+  .hamburger-closed-button{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 1rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    border-radius: 2px;
+    background-color: variables.$accent;
+    cursor: pointer;
+
+    .slice{
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      border-radius: 2px;
+      background-color: black;
+      
+    }
+
+    .slice1{
+      transform: rotate(45deg);
+    }
+
+    .slice2{
+      display: none;
+    }
+
+    .slice3{
+      transform: rotate(-45deg);
+    }
+  }
+
+  nav{
+    margin-top: 50px;
+    ul{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      li{
+        padding: 0.5rem;
+        text-align: center;
+        width: 100%;
+        border-bottom: 0.2px variables.$accent solid;
+
+        a{
+        text-transform: capitalize;
+        color: variables.$accent;
+        font-weight: bold;
+
+        &:hover{
+          color: variables.$secondary;
+          // transition: ; try to make slower
+        }
+      }
+      }
+    }
+  }
+
+  &.active {
+    left: 0;
+  }
+
+}
+
+.overlay.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  z-index: 3;
+
+}

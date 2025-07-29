@@ -1,0 +1,14 @@
+// This file includes all reusable codes in this theme
+
+@mixin twoBoxFlex($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// max-width = 1140px
+.max-width-px{
+  max-width: 1140px;
+  margin: 0 auto;
+}

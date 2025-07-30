@@ -22,7 +22,26 @@
 </section>
 
 <section>
-  Concac
+  <?php
+  $query = new WP_Query(array(
+    'post_type' => 'post',
+    'posts_per_page' => 5,
+  ));
+
+  if ($query->have_posts()):
+    while ($query->have_posts()):
+      $query->the_post();
+      ?>
+
+      <h2><?php the_title(); ?></h2>
+
+      <?php
+    endwhile;
+    wp_reset_postdata();
+  else:
+    echo 'No post';
+  endif;
+  ?>
 </section>
 
 

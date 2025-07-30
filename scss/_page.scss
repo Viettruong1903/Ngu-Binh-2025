@@ -30,6 +30,10 @@
     position: relative;
     z-index: 3;
     text-align: center;
+
+    @include queries.respond-to('desktop'){
+      
+    }
   }
   
 }

@@ -5,6 +5,8 @@
 .hero-section{
   @include reUseBlock.twoBoxFlex(column, space-between, flex-start);
   // padding: 2rem 0;
+
+  margin-bottom: 1rem;
   
   background-color: variables.$primary;
 
@@ -50,7 +52,7 @@
 
 .about{
   background-color: white;
-  padding: 1rem 1rem;
+  padding: 1rem 1rem 2rem 1rem;
 
   .wrap{
     @include queries.respond-to('tablet'){
@@ -65,30 +67,38 @@
     }
 
     .about-text{
-      .image{
-      width: 100%;
-      height: 300px;
-      background-color: lightcoral;
-      border-radius: 2rem;
-      margin-bottom: 2rem;
+      flex: 1;
 
-      @include queries.respond-to('tablet'){
-        display: none;
-      }
+      img{
+        width: 100%;
+        height: 300px;
+        display: block;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        object-fit: cover;
 
+        @include queries.respond-to('tablet'){
+          display: none;
+        }
       }
     }
 
     .image-column{
-      
+      flex: 1;
       display: none;
 
       @include queries.respond-to('tablet'){
         display: block;
         width: 100%;
         height: 400px;
-        background-color: lightcoral;
         border-radius: 2rem;
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
       }
     }
   }
@@ -96,7 +106,7 @@
 }
 
 .menu{
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   // margin-bottom: 1rem;
 
   @include queries.respond-to('tablet'){
@@ -110,6 +120,7 @@
 
   .box{
     // background-color: lightgreen;
+    @include reUseBlock.twoBoxFlex(column, space-between,center);
 
     @include queries.respond-to('tablet'){
       text-align: center;
@@ -119,7 +130,6 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem 1rem;
-      margin-top: 2rem;
       margin-bottom: 2rem;
 
       @include queries.respond-to('tablet'){
@@ -162,6 +172,10 @@
           }
 
         }
+      }
+
+      a{
+        align-self: center;
       }
     }
   }

@@ -12,12 +12,16 @@
 
 <?php get_header(); ?>
 
-<section class="banner">
-  <div class="content max-width-px">
-    <h1>Menu1</h1>
-    <p>I love my clients! I’m proud of the relationships I’ve built with my clients, as well as the websites I’ve built
-      for them. My goal is to be the one-stop-shop solution for all my clients to go to whenever they need anything done
-      to their websites.</p>
+<section class="menu-banner" aria-label="menu banner">
+  <div class="heading-menu max-width-px">
+    <h1>Ngự Bình Vietnamese Restaurant Menu</h1>
+    <p class="inline-heading">
+      Traditional Dishes in West Edmonton - Pho, Vermicelli, & More
+      <span>
+        <img src="<?php echo get_template_directory_uri(); ?>/img/soup-plate-svgrepo-com.svg"
+          alt="Vietnamese Pho noodles soup icon">
+      </span>
+    </p>
   </div>
 </section>
 
@@ -35,77 +39,13 @@
       ?>
 
     </li>
-    <li>
-      <?php
-      $term = get_term_by('slug', 'appetizer', 'menu-categories');
-
-      echo '<button data-term="' . esc_attr($term->slug) . '">';
-      echo '<img src="' . get_template_directory_uri() . '/img/drink-svgrepo-com.svg" alt="Drink SVG image">';
-      echo esc_html($term->name);
-      echo '</button>';
-      ?>
-
-    </li>
-    <li>
-      <?php
-      $term = get_term_by('slug', 'appetizer', 'menu-categories');
-
-      echo '<button data-term="' . esc_attr($term->slug) . '">';
-      echo '<img src="' . get_template_directory_uri() . '/img/drink-svgrepo-com.svg" alt="Drink SVG image">';
-      echo esc_html($term->name);
-      echo '</button>';
-      ?>
-
-    </li>
-    <li>
-      <?php
-      $term = get_term_by('slug', 'appetizer', 'menu-categories');
-
-      echo '<button data-term="' . esc_attr($term->slug) . '">';
-      echo '<img src="' . get_template_directory_uri() . '/img/drink-svgrepo-com.svg" alt="Drink SVG image">';
-      echo esc_html($term->name);
-      echo '</button>';
-      ?>
-
-    </li>
-    <li>
-      <?php
-      $term = get_term_by('slug', 'appetizer', 'menu-categories');
-
-      echo '<button data-term="' . esc_attr($term->slug) . '">';
-      echo '<img src="' . get_template_directory_uri() . '/img/drink-svgrepo-com.svg" alt="Drink SVG image">';
-      echo esc_html($term->name);
-      echo '</button>';
-      ?>
-
-    </li>
-    <li>
-      <?php
-      $term = get_term_by('slug', 'appetizer', 'menu-categories');
-
-      echo '<button data-term="' . esc_attr($term->slug) . '">';
-      echo '<img src="' . get_template_directory_uri() . '/img/drink-svgrepo-com.svg" alt="Drink SVG image">';
-      echo esc_html($term->name);
-      echo '</button>';
-      ?>
-
-    </li>
 
   </ul>
 </nav>
 
+<section id="menu-items" class="food-categories" aria-labelledby="food-filters">
 
-<div id="menu-items">
-
-</div>
-
-
-
-
-
-<section class="food-categories" aria-labelledby="food-filters">
-
-  <div class="box">
+  <!-- <div class="box">
     <div class="category">
       <div class="meal">
         <div class="meal-image-profile">
@@ -185,7 +125,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </section>
 
 <script>
@@ -199,7 +139,7 @@
         const term = this.dataset.term;
 
         // Show loading message
-        //menuItems.innerHTML = '<p>Loading...</p>';
+        menuItems.innerHTML = '<p>loading...</p>';
 
         // Make AJAX request to WordPress admin-ajax.php with your action and term
         fetch('<?php echo admin_url('admin-ajax.php'); ?>?action=filter_menu_items&term=' + term)

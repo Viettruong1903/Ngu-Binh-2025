@@ -20,9 +20,10 @@
       alt="2 bowls of Bun Bo Hue">
   </div>
   <div class="hero-text">
-    <h1>Best Vietnamese Food in Edmonton, AB</h1>
-    <p>Experience the true taste of Vietnam with every dish, crafted to bring you an unforgettable culinary journey
-      that celebrates tradition and flavor.</p>
+    <h1>The Traditional Vietnamese restaurant in West Edmonton, AB</h1>
+    <p>Experience the best Vietnamese restaurant in West Edmonton, bringing the true taste of Vietnam with every dish.
+      From pho and noodles to spring rolls, enjoy an unforgettable culinary journey that celebrates tradition and rich
+      flavors.</p>
     <div class="cta-buttons">
       <a class="primary-btn mobile-btn-primary" href="<?php echo get_permalink(get_page_by_path('menu')); ?>">Menu</a>
       <!-- <a href="<?php echo get_page_link(get_page_by_path('about')); ?>">About</a> -->
@@ -33,26 +34,26 @@
 <section class="about">
   <div class="wrap">
     <div class="about-text">
-      <h2>Experience the True Taste of Tradition</h2>
-      <p>At Ngu Binh, we are committed to delivering genuine culinary experiences that celebrate authentic flavors and
-        cultural heritage. </p>
-      <div class="image">
-        <img src="" alt="">
-      </div>
+      <h2>A New Chapter for Your Favorite - Vietnamese Restaurant in West Edmonton</h2>
+      <p>Ngự Bình Vietnamese restaurant in West Edmonton has proudly reopened under the same ownership. We continue to
+        serve the authentic flavors and traditional dishes our community loves, delivering the true taste of Vietnam
+        with every meal. </p>
+      <img src="<?php echo get_template_directory_uri(); ?>/img/old-ngu-binh-vietnamese-restaurant.jpg"
+        alt="Old Ngu Binh Vietnamese Restaurant" loading="lazy">
       <a class="primary-btn mobile-btn-primary" href="<?php echo get_permalink(get_page_by_path('about')) ?>"
-        aria-label="Read about our history">Learn
-        more</a>
+        aria-label="About Us">About Us</a>
     </div>
     <div class="image-column">
-      <img src="" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/old-ngu-binh-vietnamese-restaurant.jpg"
+        alt="Old Ngu Binh Vietnamese Restaurant" loading="lazy">
     </div>
   </div>
 </section>
 
 <section class="menu">
   <div class="box">
-    <h2>Ngu Binh: Savor Authentic Vietnamese Flavors</h2>
-    <p>Explore our diverse menu showcasing traditional and modern dishes.</p>
+    <h2>Discover Vietnamese Cuisine at Our Restaurant in West Edmonton</h2>
+    <p>Our menu highlights the richness of Vietnamese food with both traditional and modern options.</p>
     <div class="menu-dishes">
       <div class="dishes">
         <div class="dish-image-profile">
@@ -140,8 +141,8 @@
 
 <section class="location">
   <div class="location-box">
-    <h2>Ngu Binh Vietnamese Restaurant kitchen</h2>
-    <address>9831 159st NW, Edmonton AB T5P 2Z9</address>
+    <h2>Ngự Bình Vietnamese Restaurant West Edmonton</h2>
+    <address>17014 107 Ave NW, Edmonton, AB T5S 1L8</address>
     <div class="location-hours">
       <h3>Hours of Operation</h3>
       <ul>

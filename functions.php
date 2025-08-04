@@ -81,7 +81,7 @@ function ajax_filter_menu_items()
   if ($query->have_posts()) {
     while ($query->have_posts()) {
       $query->the_post();
-      echo '<section class="food-categories" aria-labelledby="food-filters">';
+
       echo '<div class="box">';
       echo ' <div class="category">';
       echo '<div class="meal">';
@@ -104,7 +104,7 @@ function ajax_filter_menu_items()
       echo '</div>';
       echo '</div>';
       echo '</div>';
-      echo '</section>';
+
     }
   } else {
     echo '<p>No menu items found for this category.</p>';

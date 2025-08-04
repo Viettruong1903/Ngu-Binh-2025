@@ -8,18 +8,17 @@ header{
   z-index: 3;
   background-color: variables.$primary;
   box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+  padding: 1rem;
 
   .header-container{
     @include reUseBlock.twoBoxFlex(row, space-between, center);
-    padding: 1rem;
+    
     
     @include queries.respond-to('desktop'){
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem;
-      // max-width: 1140px;
-      // margin: 0 auto;
+     
     }
 
 

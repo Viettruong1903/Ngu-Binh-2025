@@ -3,8 +3,9 @@
     <div class="footer-columns max-width-px">
       <div class="business-profile">
         <div class="logo"></div>
-        <p>At Ngu Binh, we are committed to delivering genuine culinary experiences that celebrate authentic flavors and
-          cultural heritage.</p>
+        <p>Ngự Bình is a traditional Vietnamese restaurant in West Edmonton, proudly serving authentic pho, noodles, and
+          classic Vietnamese dishes. Visit us to enjoy genuine flavors, warm hospitality, and a dining experience rooted
+          in cultural heritage.</p>
       </div>
 
       <div class="footer-menus">

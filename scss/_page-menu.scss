@@ -2,31 +2,49 @@
 @use 'reUseBlock';
 @use 'variables' as *;
 
+.menu-banner{
+  padding: 2rem 1rem 0 1rem;
+  .heading-menu{
+    .inline-heading{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      @include queries.respond-to('tablet'){
+        font-size: 20px;
+      }
+      span{
+        img{
+          width: 50px;
+          height: 50px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
 .filter-menu{
   position: sticky;
   top: 83px;
   z-index: 3;
-  background-color: $primary;
+  background-color: $filterMenu;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-
+  padding: 1rem 1rem 1rem 1rem;
 
   ul{
       @include reUseBlock.twoBoxFlex(row, flex-start, center);
       flex-wrap: wrap;
       gap: 0.5rem ;
-      padding: 1.5rem 1rem;
-      // background-color: lightcoral;
 
       @include queries.respond-to('desktop'){
         max-width: 1140px;
         margin: 0 auto;
-        padding: 2rem 1rem;
+        
       }
 
       li{
         @include reUseBlock.twoBoxFlex(row, space-between, flex-end);
-        // border: 1px solid $gray-dark;
-        // border-radius: 8px;
         padding: 2px 4px;
         cursor: pointer;
         border-radius: 10px;
@@ -77,7 +95,7 @@
 }
 
 .food-categories{
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   // margin-bottom: 1rem;
 
   @include queries.respond-to('tablet'){
@@ -87,6 +105,7 @@
   @include queries.respond-to('desktop'){
     max-width: 1140px;
     margin: 0 auto;
+    padding: 2rem 0;
   }
 
   .box{
@@ -100,7 +119,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem 1rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
       margin-bottom: 2rem;
 
       @include queries.respond-to('tablet'){

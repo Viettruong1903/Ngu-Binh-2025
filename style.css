@@ -104,20 +104,19 @@ header {
   z-index: 3;
   background-color: #f0e9da;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
 }
 header .header-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
 }
 @media (min-width: 1024px) {
   header .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
   }
 }
 header .header-container .logo {
@@ -255,6 +254,7 @@ header .header-container .hamburger-button .slice {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 1rem;
   background-color: #f0e9da;
 }
 .hero-section .hero-img {
@@ -299,7 +299,7 @@ header .header-container .hamburger-button .slice {
 
 .about {
   background-color: white;
-  padding: 1rem 1rem;
+  padding: 1rem 1rem 2rem 1rem;
 }
 @media (min-width: 768px) {
   .about .wrap {
@@ -317,19 +317,24 @@ header .header-container .hamburger-button .slice {
     padding: 2rem 1rem;
   }
 }
-.about .wrap .about-text .image {
+.about .wrap .about-text {
+  flex: 1;
+}
+.about .wrap .about-text img {
   width: 100%;
   height: 300px;
-  background-color: lightcoral;
-  border-radius: 2rem;
-  margin-bottom: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  object-fit: cover;
 }
 @media (min-width: 768px) {
-  .about .wrap .about-text .image {
+  .about .wrap .about-text img {
     display: none;
   }
 }
 .about .wrap .image-column {
+  flex: 1;
   display: none;
 }
 @media (min-width: 768px) {
@@ -337,13 +342,18 @@ header .header-container .hamburger-button .slice {
     display: block;
     width: 100%;
     height: 400px;
-    background-color: lightcoral;
     border-radius: 2rem;
   }
 }
+.about .wrap .image-column img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
 
 .menu {
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 }
 @media (min-width: 768px) {
   .menu {
@@ -356,6 +366,12 @@ header .header-container .hamburger-button .slice {
     margin: 0 auto;
   }
 }
+.menu .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 @media (min-width: 768px) {
   .menu .box {
     text-align: center;
@@ -365,7 +381,6 @@ header .header-container .hamburger-button .slice {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem 1rem;
-  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
@@ -407,6 +422,9 @@ header .header-container .hamburger-button .slice {
   color: #c1440e;
   font-weight: bold;
   text-decoration: underline;
+}
+.menu .box .menu-dishes a {
+  align-self: center;
 }
 
 .location {
@@ -455,12 +473,33 @@ header .header-container .hamburger-button .slice {
   z-index: 3;
   text-align: center;
 }
+.menu-banner {
+  padding: 2rem 1rem 0 1rem;
+}
+.menu-banner .heading-menu .inline-heading {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
+@media (min-width: 768px) {
+  .menu-banner .heading-menu .inline-heading {
+    font-size: 20px;
+  }
+}
+.menu-banner .heading-menu .inline-heading span img {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
 .filter-menu {
   position: sticky;
   top: 83px;
   z-index: 3;
-  background-color: #f0e9da;
+  background-color: #e3d7be;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1rem 1rem 1rem;
 }
 .filter-menu ul {
   display: flex;
@@ -469,13 +508,11 @@ header .header-container .hamburger-button .slice {
   align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  padding: 1.5rem 1rem;
 }
 @media (min-width: 1024px) {
   .filter-menu ul {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 2rem 1rem;
   }
 }
 .filter-menu ul li {
@@ -525,7 +562,7 @@ header .header-container .hamburger-button .slice {
 }
 
 .food-categories {
-  padding: 0 1rem;
+  padding: 1rem 1rem;
 }
 @media (min-width: 768px) {
   .food-categories {
@@ -536,6 +573,7 @@ header .header-container .hamburger-button .slice {
   .food-categories {
     max-width: 1140px;
     margin: 0 auto;
+    padding: 2rem 0;
   }
 }
 @media (min-width: 768px) {
@@ -547,7 +585,7 @@ header .header-container .hamburger-button .slice {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 @media (min-width: 768px) {

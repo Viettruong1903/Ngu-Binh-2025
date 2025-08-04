@@ -1,5 +1,6 @@
 $breakpoints: (
   'mobile': 480px,
+  'mobile-600':600px,
   'tablet': 768px,
   'desktop': 1024px
 );
@@ -11,7 +12,8 @@ $breakpoints: (
     @media(min-width: $breakpoints) {
       @content;
     }
-  } @else {
+  } 
+  @else {
       @warn "No value found for `#{$device}` in $breakpoints map.";
   }
 }

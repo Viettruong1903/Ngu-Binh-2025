@@ -455,6 +455,189 @@ header .header-container .hamburger-button .slice {
   z-index: 3;
   text-align: center;
 }
+.filter-menu {
+  position: sticky;
+  top: 83px;
+  z-index: 3;
+  background-color: #f0e9da;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.filter-menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+}
+@media (min-width: 1024px) {
+  .filter-menu ul {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+}
+.filter-menu ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2px 4px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+.filter-menu ul li:hover {
+  background-color: #c1440e;
+}
+.filter-menu ul li:hover button {
+  color: #f0e9da;
+}
+.filter-menu ul li:active {
+  background-color: #c1440e;
+}
+.filter-menu ul li:active button {
+  color: #f0e9da;
+}
+.filter-menu ul li:last-child {
+  background-color: #c1440e;
+  border-radius: 10px;
+}
+.filter-menu ul li button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 13px;
+  color: #333333;
+  font-weight: 600;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.filter-menu ul li button img {
+  width: 40px;
+  height: 40px;
+}
+.filter-menu ul li #menu-item-clicked {
+  color: #f0e9da;
+}
+
+.food-categories {
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .food-categories {
+    padding: 2rem 1rem;
+  }
+}
+@media (min-width: 1024px) {
+  .food-categories {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .food-categories .box {
+    text-align: center;
+  }
+}
+.food-categories .box .category {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+  .food-categories .box .category {
+    grid-template-columns: 1fr;
+    gap: 2rem 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .food-categories .box .category {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.food-categories .box .category .meal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: none;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+@media (min-width: 600px) {
+  .food-categories .box .category .meal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: none;
+  }
+}
+.food-categories .box .category .meal .meal-image-profile {
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: lightcoral;
+}
+@media (min-width: 600px) {
+  .food-categories .box .category .meal .meal-image-profile {
+    width: 30%;
+    border-radius: 1rem;
+  }
+}
+.food-categories .box .category .meal .meal-image-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+@media (min-width: 600px) {
+  .food-categories .box .category .meal .meal-image-profile img {
+    border-radius: 1rem;
+  }
+}
+.food-categories .box .category .meal .meal-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+}
+@media (min-width: 600px) {
+  .food-categories .box .category .meal .meal-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+  }
+}
+.food-categories .box .category .meal .meal-text .heading-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.food-categories .box .category .meal .meal-text .heading-row p {
+  margin-bottom: 0;
+  text-align: left;
+}
+.food-categories .box .category .meal .meal-text a {
+  color: #c1440e;
+  font-weight: bold;
+  text-decoration: underline;
+}
 
 .footer-section {
   background-color: #9c7654;

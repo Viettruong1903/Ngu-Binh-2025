@@ -1,0 +1,199 @@
+@use 'queries';
+@use 'reUseBlock';
+@use 'variables' as *;
+
+.filter-menu{
+  position: sticky;
+  top: 83px;
+  z-index: 3;
+  background-color: $primary;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+
+  ul{
+      @include reUseBlock.twoBoxFlex(row, flex-start, center);
+      flex-wrap: wrap;
+      gap: 0.5rem ;
+      padding: 1.5rem 1rem;
+      // background-color: lightcoral;
+
+      @include queries.respond-to('desktop'){
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+
+      li{
+        @include reUseBlock.twoBoxFlex(row, space-between, flex-end);
+        // border: 1px solid $gray-dark;
+        // border-radius: 8px;
+        padding: 2px 4px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: none;
+
+        &:hover{
+          background-color: $secondary;
+        }
+
+        &:hover button{
+          color: $primary;
+        }
+
+        &:active{
+          background-color: $secondary;
+        }
+
+        &:active button{
+          color: $primary;
+        }
+
+        &:last-child{
+          background-color: $secondary;
+          border-radius: 10px;
+        }
+   
+        button{
+          @include reUseBlock.twoBoxFlex(row, space-between, flex-end);
+          font-size: 13px;
+          color: $gray-dark;
+          font-weight: 600;
+          border: none;
+          background:none;
+          cursor: pointer;
+
+          img{
+            width: 40px;
+            height: 40px;
+          }
+        }
+        
+
+        #menu-item-clicked{
+          color: $primary;
+        }
+      }
+  }
+}
+
+.food-categories{
+  padding: 0 1rem;
+  // margin-bottom: 1rem;
+
+  @include queries.respond-to('tablet'){
+    padding: 2rem 1rem;
+  }
+
+  @include queries.respond-to('desktop'){
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .box{
+    // background-color: lightgreen;
+
+    @include queries.respond-to('tablet'){
+      text-align: center;
+    }
+    
+    .category{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem 1rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+
+      @include queries.respond-to('tablet'){
+        grid-template-columns: 1fr;
+        gap: 2rem 2rem;
+      }
+
+      @include queries.respond-to('desktop'){
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .meal{
+
+        @include reUseBlock.twoBoxFlex(column, space-between,none);
+
+        background-color: whitesmoke;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+
+        @include queries.respond-to('mobile-600'){
+          @include reUseBlock.twoBoxFlex(row, space-between,none);
+        }
+
+        .meal-image-profile{
+
+          width: 100%;
+          height: 150px;
+          border-top-left-radius: 1rem;
+          border-top-right-radius: 1rem;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          background-color: lightcoral;
+
+          @include queries.respond-to('mobile-600'){
+           width: 30%;
+           border-radius: 1rem;
+          }
+
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            
+            @include queries.respond-to('mobile-600'){
+              
+            border-radius: 1rem;
+          }
+          }
+        }
+
+        .meal-text{
+
+          @include reUseBlock.twoBoxFlex(column, space-between, flex-start);
+
+          width: 100%;
+          padding: 1rem;
+          gap: 1rem;
+
+          @include queries.respond-to('mobile-600'){
+            @include reUseBlock.twoBoxFlex(row, space-between, center);
+            padding: 0 1rem;
+          }
+
+          .heading-row{
+            @include reUseBlock.twoBoxFlex(column, space-between, flex-start);
+
+            // @include queries.respond-to('mobile-600'){
+            //   width: 60%;
+            // }
+
+            p{
+              margin-bottom: 0;
+              text-align: left;
+            }
+          }
+
+          // .price{
+          //   @include queries.respond-to('mobile-600'){
+          //     width: 10%;
+          //   }
+          // }
+
+          a{
+            color: $secondary;
+            font-weight: bold;
+            text-decoration: underline;
+          }
+
+        }
+      }
+    }
+  }
+
+}

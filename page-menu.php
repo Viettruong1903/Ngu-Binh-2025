@@ -40,6 +40,18 @@
 
     </li>
 
+    <li>
+      <?php
+      $term = get_term_by('slug', 'appetizers', 'menu-categories');
+
+      echo '<button data-term="' . esc_attr($term->slug) . '">';
+      echo '<img src="' . get_template_directory_uri() . '/img/appetizers-svgrepo-com.svg" alt="Drink SVG image">';
+      echo esc_html($term->name);
+      echo '</button>';
+      ?>
+
+    </li>
+
   </ul>
 </nav>
 

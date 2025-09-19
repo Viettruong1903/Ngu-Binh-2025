@@ -51,6 +51,61 @@
       ?>
 
     </li>
+    <li>
+      <?php
+      $term = get_term_by('slug', 'vermicelli-bowls', 'menu-categories');
+
+      echo '<button data-term="' . esc_attr($term->slug) . '">';
+      echo '<img src="' . get_template_directory_uri() . '/img/vermicelli-bowls-svgrepo-com.svg" alt="Vermicelli Bowls of Ngu Binh restaurant">';
+      echo esc_html($term->name);
+      echo '</button>';
+      ?>
+
+    </li>
+    <li>
+      <?php
+      $term = get_term_by('slug', 'pho-soups', 'menu-categories');
+
+      echo '<button data-term="' . esc_attr($term->slug) . '">';
+      echo '<img src="' . get_template_directory_uri() . '/img/pho-soups-svgrepo-com.svg" alt="Pho Soups Ngu Binh">';
+      echo esc_html($term->name);
+      echo '</button>';
+      ?>
+
+    </li>
+    <li>
+      <?php
+      $term = get_term_by('slug', 'rice-dishes', 'menu-categories');
+
+      echo '<button data-term="' . esc_attr($term->slug) . '">';
+      echo '<img src="' . get_template_directory_uri() . '/img/rice-dishes-svgrepo-com.svg" alt="Rice Dishes of Ngu Binh Restaurant">';
+      echo esc_html($term->name);
+      echo '</button>';
+      ?>
+
+    </li>
+    <li>
+      <?php
+      $term = get_term_by('slug', 'special-combos', 'menu-categories');
+
+      echo '<button data-term="' . esc_attr($term->slug) . '">';
+      echo '<img src="' . get_template_directory_uri() . '/img/special-combos-svgrepo-com.svg" alt="Lunch/Dinner Special Combos in Ngu Binh Restaurant">';
+      echo esc_html($term->name);
+      echo '</button>';
+      ?>
+
+    </li>
+    <li>
+      <?php
+      $term = get_term_by('slug', 'large-plates-shareable', 'menu-categories');
+
+      echo '<button data-term="' . esc_attr($term->slug) . '">';
+      echo '<img src="' . get_template_directory_uri() . '/img/large-plates-shareable-svgrepo-com.svg" alt="Large Plates Sharable for groups eating in Ngu Binh Restaurant">';
+      echo esc_html($term->name);
+      echo '</button>';
+      ?>
+
+    </li>
 
   </ul>
 </nav>
